@@ -3,15 +3,22 @@
  */
 
 plugins {
-   id "io.toolebox.git-versioner"
-}
-
-group = "com.github.leanan.sidhelle.kodi.tease"
-
-versioner {
-	pattern { pattern = "%M.%m.%p(.%c)" }
+   id 'io.toolebox.git-versioner' //verioner plugin for version from git
+   id 'maven-publish' //maven publishing plugin for publishing
 }
 
 repositories {
     mavenCentral()
+}
+
+group = 'com.github.leanan.sidhelle.kodi.tease'
+
+versioner {
+	pattern { pattern = '%M.%m.%p(.%c)' }
+}
+
+publishing {
+	repositories {
+		maven { url '${project.rootDir}/releases' }
+	}
 }
