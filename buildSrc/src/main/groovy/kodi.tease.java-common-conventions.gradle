@@ -9,7 +9,11 @@ plugins {
     // Apply the java Plugin to add support for Java.
     id 'java'
     
-    id 'jacoco' // Apply JaCoCo code coverage plugin
+    // Apply JaCoCo code coverage plugin
+    id 'jacoco' 
+    
+    // Apply SpotBugs static code analysis plugin
+    id "com.github.spotbugs" 
 }
 
 dependencies {
