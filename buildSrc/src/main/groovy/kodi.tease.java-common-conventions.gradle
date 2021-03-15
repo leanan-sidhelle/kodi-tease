@@ -3,13 +3,11 @@
  */
 
 plugins {
+	// Apply base common conventions
+	id 'kodi.tease.common-conventions'
+	
     // Apply the java Plugin to add support for Java.
     id 'java'
-}
-
-repositories {
-    // Use JCenter for resolving dependencies.
-    jcenter()
 }
 
 dependencies {
