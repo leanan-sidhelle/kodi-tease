@@ -3,7 +3,13 @@
  */
 
 plugins {
-   
+   id "io.toolebox.git-versioner"
+}
+
+group = "com.github.leanan.sidhelle.kodi.tease"
+
+versioner {
+	pattern { pattern = "%M.%m.%p(.%c)" }
 }
 
 repositories {
